@@ -29,8 +29,7 @@ function objToSql(ob) {
 			if (typeof value === 'string' && value.indexOf(' ') >= 0) {
 				value = "'" + value + "'";
 			}
-			// e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
-			// e.g. {sleepy: true} => ["sleepy=true"]
+
 			arr.push(key + '=' + value);
 		}
 	}
@@ -41,6 +40,7 @@ function objToSql(ob) {
 
 // Object for all our SQL statement functions.
 var orm = {
+	//query to select all
 	all: function(tableInput, cb) {
 		var queryString = 'SELECT * FROM ' + tableInput + ';';
 		connection.query(queryString, function(err, result) {
@@ -50,6 +50,7 @@ var orm = {
 			cb(result);
 		});
 	},
+	//query to insert a new item into table
 	create: function(table, cols, vals, cb) {
 		var queryString = 'INSERT INTO ' + table;
 
@@ -70,13 +71,13 @@ var orm = {
 			cb(result);
 		});
 	},
-	// An example of objColVals would be {name: panther, sleepy: true}
+	//method to change something already in the table
 	update: function(table, objColVals, condition, cb) {
 		var queryString = 'UPDATE ' + table;
 
 		queryString += ' SET ';
 		queryString += objToSql(objColVals);
-		queryString += ' WHERE ';
+		queryString += ' WHERE ID=';
 		queryString += condition;
 
 		console.log(queryString);
@@ -88,6 +89,7 @@ var orm = {
 			cb(result);
 		});
 	},
+	//delete something from the table
 	delete: function(table, condition, cb) {
 		var queryString = 'DELETE FROM ' + table;
 		queryString += ' WHERE ';
@@ -103,5 +105,5 @@ var orm = {
 	}
 };
 
-// Export the orm object for the model (burger.js).
+// Export the orm object for the model (cat.js).
 module.exports = orm;
