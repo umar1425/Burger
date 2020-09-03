@@ -1,0 +1,26 @@
+<li>
+	{{burger_name}}
+	{{!-- if it has not been devoured --}}
+	{{#unless devoured}}
+	{{!-- devour button --}}
+	<button class="change-devour" data-id="{{id}}" data-newdevoured="{{devoured}}">
+		DEVOUR!
+	</button>
+	{{!-- delete burger button --}}
+	<button class="delete-burger" data-id="{{id}}" data-newdevoured="{{devoured}}">
+		I don't want to eat this.
+	</button>
+	{{/unless}}
+	{{!-- if it has not been devoured --}}
+	{{#if devoured}}
+	{{!-- undevour button --}}
+	<button class="change-devour" data-id="{{id}}" data-newdevoured="{{devoured}}">
+		I don't feel so good...
+	</button>
+	{{!-- delete burger button --}}
+	<button class="delete-burger" data-id="{{id}}" data-newdevoured="{{devoured}}">
+		I never ate this.
+	</button>
+	{{/if}}
+
+</li>
