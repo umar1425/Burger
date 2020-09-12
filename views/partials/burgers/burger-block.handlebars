@@ -1,26 +1,11 @@
 <li>
-	{{burger_name}}
-	{{!-- if it has not been devoured --}}
+	{{name}}
 	{{#unless devoured}}
-	{{!-- devour button --}}
-	<button class="change-devour" data-id="{{id}}" data-newdevoured="{{devoured}}">
-		DEVOUR!
-	</button>
-	{{!-- delete burger button --}}
-	<button class="delete-burger" data-id="{{id}}" data-newdevoured="{{devoured}}">
-		I don't want to eat this.
+	<button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">
+		Devour
 	</button>
 	{{/unless}}
-	{{!-- if it has not been devoured --}}
-	{{#if devoured}}
-	{{!-- undevour button --}}
-	<button class="change-devour" data-id="{{id}}" data-newdevoured="{{devoured}}">
-		I don't feel so good...
-	</button>
-	{{!-- delete burger button --}}
-	<button class="delete-burger" data-id="{{id}}" data-newdevoured="{{devoured}}">
-		I never ate this.
-	</button>
-	{{/if}}
-
+	{{!--  
+	<button class="delete-burger" data-id="{{this.id}}">DEVOUR!</button>
+	--}}
 </li>

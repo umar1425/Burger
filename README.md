@@ -1,57 +1,38 @@
-# nodexpresshandlebars
+# Tasty Burger App!
 
-## Project Title
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-nodeexpresshandlebars
+## Table of Contents
 
-## Project Link
+1. [Project Description](#description)
+2. [Installation](#install)
+3. [Usage](#usage)
+4. [License](#license)
+5. [Contributors](#contributors)
+6. [Tests](#tests)
+7. [Questions](#questions)
 
-- https://github.com/jamesrowe1/nodeexpresshandlebars
-- https://jamesrowe-nodeexpresshandle.herokuapp.com/
+## Project Description
 
-## Screenshot
+Want to be like Plankton and eat virtual burgers? well here you go!
 
-![nodeexpress](assets/nodeexpresshandlebarsscreenshot.jpg)
+## Installation
 
-## Getting Started
+Please click on the heroku link
 
-Begin by navigating to the herokup app link above. At this time you will be presented with a web page titled "Burgers!".
+## Usage
 
-Burgers that have not yet been devoured will appear on the left, with two buttons. The first will be "DEVOUR!", which will "eat" the burger and move it to the right ("Burgers that have been devoured").
+Click the button to eat a burger, add burger info and to add burgers
 
-Burgers that have been devoured will appear on the left, with two buttons. The first will be "I don't feel so good..." which will "undevour" the burger, and move it to the column on the left. If this was in this column by mistake, you can remove it by clicking the "I never ate this." button.
+### License
 
-You can add a new burger to eat by filling in the Add a Burger form at the bottom and clicking the "Add Burger" button. You have the option to set the burger as already devoured.
+MIT
 
-## Prerequisites
+### Contributors
 
-You must have a working web browser
+Tanmay Sarker
 
-## Built With
+###### Contact Me
 
-- Visual Studio Code
-- JavaScript
-- Node
-  - mysql
-  - express
-  - express-handlebars
-- Code hosted by Github
-- App hosted by Heroku
-
-## Authors
-
-James Rowe
-
-## License
-
-Licensed under Awesome Coding L.L.C. (not a real company)
-
-## Troubleshooting
-
-For any issues contact James Rowe
-
-## Acknowledgments
-
-- Ben Wright
-- Justin Pinero
-- Wilson Linares
+- GitHub Profile: https://github.com/https://github.com/tsarker921
+- Email Address: tanmay.sarker@baruchmail.cuny.edu
