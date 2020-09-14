@@ -12,14 +12,17 @@ $(function () {
     };
 
     // Send the PUT request.
-    $.ajax("/api/burgers/" + id, {
-      type: "PUT",
-      data: newDevouredState,
-    }).then(function () {
-      console.log("changed devoured to", newDevouredState);
-      // Reload the page to get the updated list
-      location.reload();
-    });
+    $.ajax(
+      "/api/burgers/" + id,
+      {
+        type: "PUT",
+        data: newDevouredState,
+      })
+      .then(function () {
+        console.log("changed devoured to", newDevouredState);
+        // Reload the page to get the updated list
+        location.reload();
+      });
   });
 
   $(".create-form").on("submit", function (event) {
@@ -28,6 +31,7 @@ $(function () {
 
     var newBurger = {
       name: $("#ca").val().trim(),
+      // calories: $("#ing").val().trim(),
       devoured: $("[name=devoured]:checked").val().trim(),
     };
 
@@ -55,3 +59,4 @@ $(function () {
     });
   });
 });
+

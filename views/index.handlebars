@@ -1,6 +1,6 @@
-<h1>Burgers!</h1>
+<h1>Chazz's Burger Joint!</h1>
 
-<h2>Burgers that are not devoured!</h2>
+<h2>Burgers that are not devoured (yet!)</h2>
 
 <ul>
   {{#each burgers}}
@@ -24,8 +24,17 @@
 <form class="create-form">
 
   <div class="form-group">
+    {{!-- burger name --}}
     <label for="ca">Burger Name:</label>
     <input type="text" id="ca" name="name">
+
+  </div>
+
+  <div class="form-group">
+    {{!-- burger ingredients --}}
+    <label for="ing">Burger Calories:</label>
+    <input type="text" id="ing" name="calories">
+
   </div>
 
   <div class="form-group">
